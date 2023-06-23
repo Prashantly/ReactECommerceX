@@ -14,15 +14,11 @@ const customFetch = async (url, { body, ...customConfig }) => {
     const response = await fetch(url, config);
     const data = await response.json();
 
-    if (data.success) {
-      return {
-        data: data.data,
-        success: true,
-      };
+    if (data) {
+      return data;
+    } else {
+      throw new Error("Not able to fetch products");
     }
-
-    //if success is false we pass failure message to error in catch
-    throw new Error(data.message);
   } catch (error) {
     console.error("error");
     return {
