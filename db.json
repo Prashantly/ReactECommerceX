@@ -6,7 +6,7 @@
       "description": "An apple mobile which is nothing like apple",
       "price": 549,
       "discountPercentage": 12.96,
-      "rating": 4.69,
+      "rating": 3,
       "stock": 94,
       "brand": "Apple",
       "category": "smartphones",
@@ -38,35 +38,41 @@
       ]
     },
     {
-      "id": 3,
-      "title": "Samsung Universe 9",
-      "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
-      "price": 1249,
-      "discountPercentage": 15.46,
-      "rating": 4.09,
-      "stock": 36,
-      "brand": "Samsung",
-      "category": "smartphones",
-      "thumbnail": "https://i.dummyjson.com/data/products/3/thumbnail.jpg",
-      "images": ["https://i.dummyjson.com/data/products/3/1.jpg"]
+      "id": 16,
+      "title": "Hyaluronic Acid Serum",
+      "description": "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
+      "price": 19,
+      "discountPercentage": 13.31,
+      "rating": 4.83,
+      "stock": 110,
+      "brand": "L'Oreal Paris",
+      "category": "skincare",
+      "thumbnail": "https://i.dummyjson.com/data/products/16/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/16/1.png",
+        "https://i.dummyjson.com/data/products/16/2.webp",
+        "https://i.dummyjson.com/data/products/16/3.jpg",
+        "https://i.dummyjson.com/data/products/16/4.jpg",
+        "https://i.dummyjson.com/data/products/16/thumbnail.jpg"
+      ]
     },
     {
-      "id": 4,
-      "title": "OPPOF19",
-      "description": "OPPO F19 is officially announced on April 2021.",
-      "price": 280,
-      "discountPercentage": 17.91,
-      "rating": 4.3,
-      "stock": 123,
-      "brand": "OPPO",
-      "category": "smartphones",
-      "thumbnail": "https://i.dummyjson.com/data/products/4/thumbnail.jpg",
+      "id": 20,
+      "title": "Freckle Treatment Cream- 15gm",
+      "description": "Fair & Clear is Pakistan's only pure Freckle cream which helpsfade Freckles, Darkspots and pigments. Mercury level is 0%, so there are no side effects.",
+      "price": 70,
+      "discountPercentage": 16.99,
+      "rating": 4.06,
+      "stock": 140,
+      "brand": "Fair & Clear",
+      "category": "skincare",
+      "thumbnail": "https://i.dummyjson.com/data/products/20/thumbnail.jpg",
       "images": [
-        "https://i.dummyjson.com/data/products/4/1.jpg",
-        "https://i.dummyjson.com/data/products/4/2.jpg",
-        "https://i.dummyjson.com/data/products/4/3.jpg",
-        "https://i.dummyjson.com/data/products/4/4.jpg",
-        "https://i.dummyjson.com/data/products/4/thumbnail.jpg"
+        "https://i.dummyjson.com/data/products/20/1.jpg",
+        "https://i.dummyjson.com/data/products/20/2.jpg",
+        "https://i.dummyjson.com/data/products/20/3.jpg",
+        "https://i.dummyjson.com/data/products/20/4.jpg",
+        "https://i.dummyjson.com/data/products/20/thumbnail.jpg"
       ]
     },
     {
@@ -123,41 +129,39 @@
       ]
     },
     {
-      "id": 8,
-      "title": "Microsoft Surface Laptop 4",
-      "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
-      "price": 1499,
-      "discountPercentage": 10.23,
-      "rating": 4.43,
-      "stock": 68,
-      "brand": "Microsoft Surface",
-      "category": "laptops",
-      "thumbnail": "https://i.dummyjson.com/data/products/8/thumbnail.jpg",
+      "id": 19,
+      "title": "Skin Beauty Serum.",
+      "description": "Product name: rorec collagen hyaluronic acid white face serum riceNet weight: 15 m",
+      "price": 46,
+      "discountPercentage": 10.68,
+      "rating": 4.42,
+      "stock": 54,
+      "brand": "ROREC White Rice",
+      "category": "skincare",
+      "thumbnail": "https://i.dummyjson.com/data/products/19/thumbnail.jpg",
       "images": [
-        "https://i.dummyjson.com/data/products/8/1.jpg",
-        "https://i.dummyjson.com/data/products/8/2.jpg",
-        "https://i.dummyjson.com/data/products/8/3.jpg",
-        "https://i.dummyjson.com/data/products/8/4.jpg",
-        "https://i.dummyjson.com/data/products/8/thumbnail.jpg"
+        "https://i.dummyjson.com/data/products/19/1.jpg",
+        "https://i.dummyjson.com/data/products/19/2.jpg",
+        "https://i.dummyjson.com/data/products/19/3.png",
+        "https://i.dummyjson.com/data/products/19/thumbnail.jpg"
       ]
     },
     {
-      "id": 9,
-      "title": "Infinix INBOOK",
-      "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
-      "price": 1099,
-      "discountPercentage": 11.83,
-      "rating": 4.54,
-      "stock": 96,
-      "brand": "Infinix",
-      "category": "laptops",
-      "thumbnail": "https://i.dummyjson.com/data/products/9/thumbnail.jpg",
+      "id": 30,
+      "title": "Key Holder",
+      "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
+      "price": 30,
+      "discountPercentage": 2.92,
+      "rating": 4.92,
+      "stock": 54,
+      "brand": "Golden",
+      "category": "home-decoration",
+      "thumbnail": "https://i.dummyjson.com/data/products/30/thumbnail.jpg",
       "images": [
-        "https://i.dummyjson.com/data/products/9/1.jpg",
-        "https://i.dummyjson.com/data/products/9/2.png",
-        "https://i.dummyjson.com/data/products/9/3.png",
-        "https://i.dummyjson.com/data/products/9/4.jpg",
-        "https://i.dummyjson.com/data/products/9/thumbnail.jpg"
+        "https://i.dummyjson.com/data/products/30/1.jpg",
+        "https://i.dummyjson.com/data/products/30/2.jpg",
+        "https://i.dummyjson.com/data/products/30/3.jpg",
+        "https://i.dummyjson.com/data/products/30/thumbnail.jpg"
       ]
     },
     {
@@ -250,6 +254,45 @@
         "https://i.dummyjson.com/data/products/14/2.jpg",
         "https://i.dummyjson.com/data/products/14/3.jpg",
         "https://i.dummyjson.com/data/products/14/thumbnail.jpg"
+      ]
+    },
+    {
+      "id": 27,
+      "title": "Flying Wooden Bird",
+      "description": "Package Include 6 Birds with Adhesive Tape Shape: 3D Shaped Wooden Birds Material: Wooden MDF, Laminated 3.5mm",
+      "price": 51,
+      "discountPercentage": 15.58,
+      "rating": 4.41,
+      "stock": 17,
+      "brand": "Flying Wooden",
+      "category": "home-decoration",
+      "thumbnail": "https://i.dummyjson.com/data/products/27/thumbnail.webp",
+      "images": [
+        "https://i.dummyjson.com/data/products/27/1.jpg",
+        "https://i.dummyjson.com/data/products/27/2.jpg",
+        "https://i.dummyjson.com/data/products/27/3.jpg",
+        "https://i.dummyjson.com/data/products/27/4.jpg",
+        "https://i.dummyjson.com/data/products/27/thumbnail.webp"
+      ]
+    },
+    {
+      "id": 26,
+      "title": "Plant Hanger For Home",
+      "description": "Boho Decor Plant Hanger For Home Wall Decoration Macrame Wall Hanging Shelf",
+      "price": 41,
+      "discountPercentage": 17.86,
+      "rating": 4.08,
+      "stock": 131,
+      "brand": "Boho Decor",
+      "category": "home-decoration",
+      "thumbnail": "https://i.dummyjson.com/data/products/26/thumbnail.jpg",
+      "images": [
+        "https://i.dummyjson.com/data/products/26/1.jpg",
+        "https://i.dummyjson.com/data/products/26/2.jpg",
+        "https://i.dummyjson.com/data/products/26/3.jpg",
+        "https://i.dummyjson.com/data/products/26/4.jpg",
+        "https://i.dummyjson.com/data/products/26/5.jpg",
+        "https://i.dummyjson.com/data/products/26/thumbnail.jpg"
       ]
     }
   ]

@@ -20,7 +20,7 @@ const customFetch = async (url, { body, ...customConfig }) => {
       throw new Error("Not able to fetch products");
     }
   } catch (error) {
-    console.error("error");
+    console.log("error", error);
     return {
       message: error.message,
       success: false,
