@@ -4,8 +4,9 @@ import { CircularProgress } from "@mui/material";
 import Rating from "@mui/material/Rating";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { Link } from "react-router-dom";
 
-const Products = () => {
+const ProductCard = () => {
   const products = useSelector((state) => {
     return state.products;
   });
@@ -29,7 +30,8 @@ const Products = () => {
                   product;
 
                 return (
-                  <div
+                  <Link
+                    to={`/products/${id}`}
                     key={id}
                     className="lg:w-1/4 md:w-1/2 p-4 w-full shadow-md cursor-pointer"
                   >
@@ -66,7 +68,7 @@ const Products = () => {
                         </button>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
           </div>
@@ -76,4 +78,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default ProductCard;

@@ -38,12 +38,12 @@ const Product = () => {
   console.log("product", product);
   return (
     <section className="text-gray-600 body-font overflow-hidden">
-      <div className="container px-5 py-20 mx-auto">
-        <div className="lg:w-4/5 mx-auto flex flex-wrap">
+      <div className="container px-5 mx-auto">
+        <div className="lg:w-4/5 mx-auto flex flex-wrap items-center mt-10">
           <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mt-6 lg:mt-0">
             <img
               alt={product?.title}
-              className="lg:w-1/1 w-full lg:h-auto object-contain max-h-[500px] object-center rounded"
+              className="lg:w-1/1 w-full lg:h-auto max-h-[470px] object-contain object-center rounded"
               src={product?.thumbnail}
             />
             <div className="flex mt-4">

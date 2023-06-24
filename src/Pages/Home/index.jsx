@@ -1,5 +1,5 @@
 import Hero from "../../components/Hero";
-import Products from "../../components/Products";
+import ProductCard from "../../components/ProductCard";
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
           MOST POPULAR PRODUCTS
         </h1>
       </div>
-      <Products />
+      <ProductCard />
     </>
   );
 };

@@ -6,7 +6,7 @@ import API_BASE_URL from "../apiConfig";
 import { useDispatch } from "react-redux";
 import { addProducts, setLoading } from "../states/actions";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Product from "../Pages/Product";
+import Product from "../Pages/ProductDetails";
 
 function App() {
   const dispatch = useDispatch();
