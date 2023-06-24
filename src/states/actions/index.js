@@ -9,7 +9,6 @@ export function addProducts(products) {
 }
 
 export function setLoading(isLoading) {
-  console.log("action", isLoading);
   return {
     type: SET_LOADING,
     isLoading,
