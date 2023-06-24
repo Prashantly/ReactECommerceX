@@ -15,7 +15,7 @@ const ProductCard = () => {
 
   return (
     <section className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-20 mx-auto">
         {isLoading ? (
           <div className="flex justify-center">
             <CircularProgress /> {/* Render your loading icon here */}
@@ -24,8 +24,6 @@ const ProductCard = () => {
           <div className="flex flex-wrap -m-4">
             {products.length > 0 &&
               products.map((product) => {
-                console.log("product", product);
-
                 const { id, title, price, thumbnail, rating, category } =
                   product;
 

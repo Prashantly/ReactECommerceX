@@ -19,6 +19,9 @@ function App() {
         method: "GET",
       });
 
+      // stote products array in local Storage
+      window.localStorage.setItem("products", JSON.stringify(products));
+
       // console.log(products);
       dispatch(addProducts(products));
 

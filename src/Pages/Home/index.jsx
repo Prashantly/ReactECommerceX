@@ -1,5 +1,6 @@
 import Hero from "../../components/Hero";
 import ProductCard from "../../components/ProductCard";
+import Sort from "../../components/Sort";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
           MOST POPULAR PRODUCTS
         </h1>
       </div>
+      <Sort />
       <ProductCard />
     </>
   );
