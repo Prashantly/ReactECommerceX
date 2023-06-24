@@ -5,6 +5,7 @@ import customFetch from "../api";
 import API_BASE_URL from "../apiConfig";
 import { useDispatch } from "react-redux";
 import { addProducts } from "../states/actions";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   const dispatch = useDispatch();
@@ -23,10 +24,12 @@ function App() {
     fetchData();
   }, [dispatch]);
   return (
-    <div>
+    <Router>
       <Header />
-      <Home />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
