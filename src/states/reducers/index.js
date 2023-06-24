@@ -1,7 +1,8 @@
-import { ADD_PRODUCTS } from "../actions";
+import { ADD_PRODUCTS, SET_LOADING } from "../actions";
 
 let initialState = {
   products: [],
+  isLoading: false,
 };
 
 export default function products(state = initialState, action) {
@@ -10,6 +11,12 @@ export default function products(state = initialState, action) {
       return {
         ...state,
         products: action.products,
+      };
+
+    case SET_LOADING:
+      return {
+        ...state,
+        isLoading: action.isLoading,
       };
     default:
       return state;

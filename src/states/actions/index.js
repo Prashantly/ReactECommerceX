@@ -1,9 +1,17 @@
 export const ADD_PRODUCTS = "ADD_PRODUCTS";
+export const SET_LOADING = "SET_LOADING";
 
 export function addProducts(products) {
-  console.log("action", products);
   return {
     type: ADD_PRODUCTS,
     products,
+  };
+}
+
+export function setLoading(isLoading) {
+  console.log("action", isLoading);
+  return {
+    type: SET_LOADING,
+    isLoading,
   };
 }
