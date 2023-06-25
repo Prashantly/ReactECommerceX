@@ -14,7 +14,7 @@ const navigations = [
   },
   {
     name: "Add Product",
-    path: "/products/add",
+    path: "/products/add-product",
   },
 ];
 
@@ -45,7 +45,7 @@ const Header = () => {
             return (
               <Link
                 key={index}
-                to={naviagation.url}
+                to={naviagation.path}
                 className="mr-5 hover:text-gray-900"
               >
                 {naviagation.name}

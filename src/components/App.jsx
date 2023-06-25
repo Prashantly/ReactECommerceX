@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { addProducts, setLoading } from "../states/actions";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Product from "../Pages/ProductDetails";
+import AddProduct from "../Pages/AddProduct";
 
 function App() {
   const dispatch = useDispatch();
@@ -36,6 +37,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/products/:id" element={<Product />}></Route>
+        <Route path="/products/add-product" element={<AddProduct />}></Route>
       </Routes>
     </Router>
   );
