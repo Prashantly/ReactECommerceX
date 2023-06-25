@@ -1,8 +1,14 @@
 import Hero from "../../components/Hero";
 import ProductCard from "../../components/ProductCard";
 import Sort from "../../components/Sort";
+import { useSelector } from "react-redux";
+import { CircularProgress } from "@mui/material";
 
 const Home = () => {
+  const products = useSelector((state) => {
+    return state.products;
+  });
+  const isLoading = useSelector((state) => state.isLoading);
   return (
     <>
       <Hero />
@@ -15,7 +21,22 @@ const Home = () => {
         </h1>
       </div>
       <Sort />
-      <ProductCard />
+
+      {isLoading ? (
+        <div className="flex justify-center">
+          <CircularProgress />
+        </div>
+      ) : (
+        <section className="text-gray-600 body-font">
+          <div className="container px-5 py-20 mx-auto">
+            <div className="flex flex-wrap m-4">
+              {products.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </>
   );
 };
