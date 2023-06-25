@@ -38,12 +38,18 @@ const Product = () => {
   console.log("product", product);
   return (
     <section className="text-gray-600 body-font overflow-hidden">
+      <p className="text-red-500 text-center text-md mt-5">
+        Hurry, only {product?.stock} item(s) left in stock!
+      </p>
+      <p className="text-indigo-500 text-center text-md mt-5">
+        Don't miss out! Apply {product?.discountPercentage}% discount now!
+      </p>
       <div className="container px-5 mx-auto">
-        <div className="lg:w-4/5 mx-auto flex flex-wrap items-center mt-10">
-          <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mt-6 lg:mt-0">
+        <div className="lg:w-4/5 mx-auto flex flex-wrap items-center">
+          <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 lg:mt-0">
             <img
               alt={product?.title}
-              className="lg:w-1/1 w-full lg:h-auto max-h-[470px] object-contain object-center rounded"
+              className="lg:w-1/1 w-full lg:h-auto max-h-[400px] object-fit object-center rounded"
               src={product?.thumbnail}
             />
             <div className="flex mt-4">
@@ -51,13 +57,13 @@ const Product = () => {
                 <img
                   alt="ecommerce"
                   key={index}
-                  className="lg:w-1/4 w-full lg:h-auto object-contain object-center rounded ml-2"
+                  className="lg:w-1/6 w-full lg:h-auto object-contain object-center rounded ml-2"
                   src={image}
                 />
               ))}
             </div>
           </div>
-          <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+          <div className="lg:w-1/2 w-full lg:pl-10 lg:py-3 lg:mt-0">
             <h2 className="text-sm title-font text-gray-500 tracking-widest">
               {product?.brand}
             </h2>

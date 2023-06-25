@@ -85,7 +85,7 @@ const ProductCard = ({ product }) => {
       toast.success("You deleted the item successfully!!");
     } catch (error) {
       console.log(error);
-      toast.error("Failed to delete the given item");
+      toast.error("Failed to delete the given");
     }
   };
 
