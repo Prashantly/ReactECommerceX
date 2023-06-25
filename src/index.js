@@ -5,7 +5,7 @@ import App from "./components/App";
 import products from "./states/reducers";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import { ToastContainer } from "react-toastify";
+import { Flip, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const store = createStore(products);
@@ -24,6 +24,7 @@ root.render(
       pauseOnFocusLoss
       draggable
       pauseOnHover
+      transition={Flip}
       theme="colored"
     />
   </Provider>

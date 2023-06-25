@@ -71,6 +71,24 @@ const ProductCard = ({ product }) => {
       });
   };
 
+  const handleDeleteProduct = async () => {
+    try {
+      let url = `${API_BASE_URL}/products/${product.id}`;
+
+      await customFetch(url, {
+        method: "DELETE",
+      });
+
+      let index = products.indexOf(product);
+      products.splice(index, 1);
+      dispatchProduct(addProducts([...products]));
+      toast.success("You deleted the item successfully!!");
+    } catch (error) {
+      console.log(error);
+      toast.error("Failed to delete the given item");
+    }
+  };
+
   const handleTitleChange = (event) => {
     setEditedTitle(event.target.value);
   };
@@ -159,7 +177,7 @@ const ProductCard = ({ product }) => {
                 <EditIcon onClick={handleEdit} />
               </button>
               <button>
-                <DeleteIcon />
+                <DeleteIcon onClick={handleDeleteProduct} />
               </button>
             </div>
           </>
