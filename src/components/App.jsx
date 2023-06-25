@@ -8,6 +8,7 @@ import { addProducts, setLoading } from "../states/actions";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Product from "../Pages/ProductDetails";
 import AddProduct from "../Pages/AddProduct";
+import Cart from "../Pages/Cart";
 
 function App() {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/products/:id" element={<Product />}></Route>
         <Route path="/products/add-product" element={<AddProduct />}></Route>
+        <Route path="/cart" element={<Cart />}></Route>
       </Routes>
     </Router>
   );
