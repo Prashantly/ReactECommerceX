@@ -5,10 +5,12 @@ import customFetch from "../../api";
 import { useNavigate } from "react-router-dom";
 import { Rating } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
-import { addToCart } from "../../states/actions";
+import { addToCart, totalCartCount } from "../../states/actions";
+import { toast } from "react-toastify";
 
 const Product = () => {
   const dispatchCart = useDispatch();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const { id } = useParams();
   const [product, setProduct] = useState({});
@@ -34,6 +36,8 @@ const Product = () => {
     console.log("Product", product);
     // const cartArray = JSON.parse(localStorage.getItem("cart")) || [];
     dispatchCart(addToCart(product));
+    toast.success("Product added to cart");
+    dispatch(totalCartCount());
     if (redirect) {
       navigate("/cart");
     }

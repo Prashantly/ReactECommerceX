@@ -1,10 +1,16 @@
-import { ADD_PRODUCTS, SET_LOADING, ADD_TO_CART } from "../actions";
+import {
+  ADD_PRODUCTS,
+  SET_LOADING,
+  ADD_TO_CART,
+  UPDATE_CART,
+  TOTAL_CART,
+} from "../actions";
 
 let initialState = {
   products: [],
   isLoading: false,
   cart: [],
-  // totalCart: 0,
+  totalCartCount: 0,
 };
 
 export default function products(state = initialState, action) {
@@ -45,6 +51,32 @@ export default function products(state = initialState, action) {
           cart: updatedCart,
         };
       }
+
+    case UPDATE_CART:
+      let index = state.cart.indexOf(action.cartItem);
+      let newCartArray;
+      if (index !== -1) {
+        newCartArray = [...state.cart];
+        newCartArray[index] = action.cartItem;
+      }
+
+      console.log(state.cart);
+
+      return {
+        ...state,
+        cart: newCartArray,
+      };
+
+    case TOTAL_CART:
+      let { cart } = state;
+      let total = cart.reduce((total, item) => {
+        return (total = total + item.quantity);
+      }, 0);
+
+      return {
+        ...state,
+        totalCartCount: total,
+      };
 
     default:
       return state;
