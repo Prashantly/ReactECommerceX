@@ -11,7 +11,6 @@ import { toast } from "react-toastify";
 const Cart = () => {
   const [totalPrice, setTotalPrice] = useState(0);
   let cart = useSelector((state) => {
-    console.log(state);
     return state.cart;
   });
 
@@ -39,6 +38,7 @@ const Cart = () => {
   const handleDec = (cartItem) => {
     if (cartItem.quantity === 1) {
       dispatch(removeFromCart(cartItem));
+      dispatch(totalCartCount());
       toast.success("Product is removed from cart");
       return;
     }
@@ -84,7 +84,10 @@ const Cart = () => {
           </div>
           {cart.map((item) => {
             return (
-              <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
+              <div
+                key={item.id}
+                className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5"
+              >
                 <div className="flex w-2/5">
                   <div className="w-20">
                     <img
