@@ -50,6 +50,7 @@ const Cart = () => {
   const removeProduct = (cartItem) => {
     dispatch(removeFromCart(cartItem));
     dispatch(totalCartCount());
+    toast.success("Product is removed from cart");
   };
 
   if (cart.length === 0) {
