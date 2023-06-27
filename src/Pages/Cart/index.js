@@ -1,16 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { updateCart, totalCartCount } from "../../states/actions";
+import {
+  updateCart,
+  totalCartCount,
+  removeFromCart,
+} from "../../states/actions";
 import { toast } from "react-toastify";
 
 const Cart = () => {
+  const [totalPrice, setTotalPrice] = useState(0);
   let cart = useSelector((state) => {
     console.log(state);
     return state.cart;
   });
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    const calcTotalPrice = () => {
+      let total = cart.reduce((total, item) => {
+        return total + item.price * item.quantity;
+      }, 0);
+
+      setTotalPrice(total);
+    };
+
+    calcTotalPrice();
+  }, [cart]);
 
   //handle increment of cart
   const handleInc = (cartItem) => {
@@ -21,6 +38,7 @@ const Cart = () => {
 
   const handleDec = (cartItem) => {
     if (cartItem.quantity === 1) {
+      dispatch(removeFromCart(cartItem));
       toast.success("Product is removed from cart");
       return;
     }
@@ -29,10 +47,15 @@ const Cart = () => {
     dispatch(totalCartCount());
   };
 
+  const removeProduct = (cartItem) => {
+    dispatch(removeFromCart(cartItem));
+    dispatch(totalCartCount());
+  };
+
   if (cart.length === 0) {
     return (
       <div className="text-center mt-10">
-        <h2 className="font-semibold text-2xl">Cart is empty 😔😔</h2>
+        <h2 className="font-semibold text-2xl">Cart is Empty 😔😔</h2>
       </div>
     );
   }
@@ -78,7 +101,7 @@ const Cart = () => {
                     </span>
                     <div
                       className="font-semibold hover:text-red-500 text-gray-500 text-xs cursor-pointer"
-                      // onClick={() => removeProduct(cart?.id)}
+                      onClick={() => removeProduct(item)}
                     >
                       Remove
                     </div>
@@ -138,7 +161,7 @@ const Cart = () => {
             <span className="font-semibold text-sm uppercase">
               Items {cart?.length}
             </span>
-            <span className="font-semibold text-sm">{10}$</span>
+            <span className="font-semibold text-sm">{totalPrice}$</span>
           </div>
           <div>
             <label className="font-medium inline-block mb-3 text-sm uppercase">
@@ -168,7 +191,7 @@ const Cart = () => {
           <div className="border-t mt-8">
             <div className="flex font-semibold justify-between py-6 text-sm uppercase">
               <span>Total cost</span>
-              <span>10</span>
+              <span>{totalPrice + 10}</span>
             </div>
             <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
               Checkout

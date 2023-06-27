@@ -3,6 +3,7 @@ export const SET_LOADING = "SET_LOADING";
 export const ADD_TO_CART = "ADD_TO_CART";
 export const UPDATE_CART = "UPDATE_CART";
 export const TOTAL_CART = "TOTAL_CART";
+export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 
 export function addProducts(products) {
   return {
@@ -29,6 +30,13 @@ export function addToCart(item) {
 export function updateCart(cartItem) {
   return {
     type: UPDATE_CART,
+    cartItem,
+  };
+}
+
+export function removeFromCart(cartItem) {
+  return {
+    type: REMOVE_FROM_CART,
     cartItem,
   };
 }

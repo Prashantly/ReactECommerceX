@@ -4,6 +4,7 @@ import {
   ADD_TO_CART,
   UPDATE_CART,
   TOTAL_CART,
+  REMOVE_FROM_CART,
 } from "../actions";
 
 let initialState = {
@@ -76,6 +77,15 @@ export default function products(state = initialState, action) {
       return {
         ...state,
         totalCartCount: total,
+      };
+
+    case REMOVE_FROM_CART:
+      let position = state.cart.indexOf(action.cartItem);
+      let newCart = [...state.cart];
+      newCart.splice(position, 1);
+      return {
+        ...state,
+        cart: newCart,
       };
 
     default:
