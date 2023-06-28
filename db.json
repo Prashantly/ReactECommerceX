@@ -20,24 +20,6 @@
       ]
     },
     {
-      "id": 2,
-      "title": "iPhone X1",
-      "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
-      "price": "902",
-      "discountPercentage": 17.94,
-      "rating": 4.44,
-      "stock": 34,
-      "brand": "Apple",
-      "category": "smartphones",
-      "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
-      "images": [
-        "https://i.dummyjson.com/data/products/2/1.jpg",
-        "https://i.dummyjson.com/data/products/2/2.jpg",
-        "https://i.dummyjson.com/data/products/2/3.jpg",
-        "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
-      ]
-    },
-    {
       "id": 16,
       "title": "Hyaluronic Acid Serum",
       "description": "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
@@ -289,6 +271,16 @@
         "https://i.dummyjson.com/data/products/22/2.jpg",
         "https://i.dummyjson.com/data/products/22/3.jpg"
       ]
+    },
+    {
+      "id": 1687965233121,
+      "title": "cereals muesli fruit nuts",
+      "category": "abc",
+      "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
+      "price": "130",
+      "rating": "4",
+      "brand": "fauji",
+      "thumbnail": "https://i.dummyjson.com/data/products/24/thumbnail.jpg"
     }
   ]
 }

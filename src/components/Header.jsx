@@ -10,10 +10,6 @@ const navigations = [
     path: "/",
   },
   {
-    name: "Products",
-    path: "/products",
-  },
-  {
     name: "Add Product",
     path: "/products/add-product",
   },

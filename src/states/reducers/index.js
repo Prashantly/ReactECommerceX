@@ -9,7 +9,7 @@ import {
 
 let initialState = {
   products: [],
-  isLoading: false,
+  isLoading: true,
   cart: [],
   totalCartCount: 0,
 };

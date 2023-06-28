@@ -4,9 +4,10 @@ import API_BASE_URL from "../../apiConfig";
 import customFetch from "../../api";
 import { useNavigate } from "react-router-dom";
 import { Rating } from "@mui/material";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { addToCart, totalCartCount } from "../../states/actions";
 import { toast } from "react-toastify";
+import { CircularProgress } from "@mui/material";
 
 const Product = () => {
   const dispatchCart = useDispatch();
@@ -14,19 +15,25 @@ const Product = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const [product, setProduct] = useState({});
-  let cart = useSelector((state) => {
-    return state.cart;
-  });
+  const [isLoading, setLoading] = useState(true);
+  // let cart = useSelector((state) => {
+  //   return state.cart;
+  // });
 
-  console.log("cart", cart);
+  // console.log("cart", cart);
 
   useEffect(() => {
     const fetchProduct = async () => {
-      console.log(`${API_BASE_URL}/products/${id}`);
-      const data = await customFetch(`${API_BASE_URL}/products/${id}`, {
-        method: "GET",
-      });
-      setProduct(data);
+      try {
+        const data = await customFetch(`${API_BASE_URL}/products/${id}`, {
+          method: "GET",
+        });
+        setProduct(data);
+      } catch (error) {
+        console.error("Error fetching product:", error);
+      } finally {
+        setLoading(false);
+      }
     };
 
     fetchProduct();
@@ -43,8 +50,16 @@ const Product = () => {
     }
   };
 
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center">
+        <CircularProgress />
+      </div>
+    );
+  }
+
   //if product key array length is not greter than 0 return product not found
-  if (Object.keys(product).length === 0) {
+  if (Object.keys(product).length === 0 && isLoading === false) {
     return (
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-24 mx-auto">
