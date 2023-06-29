@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Product from "../Pages/ProductDetails";
 import AddProduct from "../Pages/AddProduct";
 import Cart from "../Pages/Cart";
+import NotFoundPage from "./NotFoundPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -40,6 +41,7 @@ function App() {
         <Route path="/products/:id" element={<Product />}></Route>
         <Route path="/products/add-product" element={<AddProduct />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
+        <Route path="*" element={<NotFoundPage />}></Route>
       </Routes>
     </Router>
   );
